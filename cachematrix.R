@@ -1,9 +1,7 @@
-## Put comments here that give an overall description of what your
-## functions do
+## this pair of functions creat a matrix, stores the inverse (i) of that matrix, and then checks if there is any inverse stored in the memory, if not the case, calculates such a inverse and then stores it
+## makeCachematrix allows to retrieve the inverse (i) of a fiven x matrix 
 
-## Write a short comment describing this function
-
-makeCacheMatrix <- function(x = matrix()) {   ##NB que esto significa que m es por 
+makeCacheMatrix <- function(x = matrix()) {   ##NB que esto significa que x es por 
 ##default una matrix vacia
         i <- NULL
         set <- function(y) {     ##creo la funcionalidad set en caso de que quiera modificar externamente el input x
@@ -20,7 +18,7 @@ makeCacheMatrix <- function(x = matrix()) {   ##NB que esto significa que m es p
 }
 
 
-## Write a short comment describing this function
+## cacheSolve calls functions within the great function makeCacheMatrix. if a inverse is found withind makeCacheMatrix, cacheSolve shall return it, otherwise it will calculate such an inverse and store it within makeCachematrix using the functions there contained for that purpose
 
 cacheSolve <- function(x, ...) {
         i <- x$getinverse()
